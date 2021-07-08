@@ -3,7 +3,7 @@
 O projeto a ser desenvolvido é um sistema para uma floricultura e seus diversos microsserviços. O projeto será realizado com Spring Cloud.
 
 
-## Floricultura 
+## Loja 
   Realiza a gestão do pedido:
   * Disponibiliza um catálogo de produtos por Estado;  a floricultura tem um cadastro de fornecedor por região;
   * Realiza o pedido e envia para fornecedor de um Estado;
