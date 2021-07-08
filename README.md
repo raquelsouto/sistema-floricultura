@@ -14,6 +14,6 @@ O projeto a ser desenvolvido é um sistema para uma floricultura e seus diversos
   * Gerencia o catálogo, mantendo os produtos disponíveis atualizados e envia para a floricultura;
   * Executa os pedidos e envia uma estimativa para que o produto fique pronto.
 
-## Transportadora
+## Transportador
   Gestão do voucher:
   * Gera um voucher para origem e destino.
