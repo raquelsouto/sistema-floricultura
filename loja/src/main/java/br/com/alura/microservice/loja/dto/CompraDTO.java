@@ -1,4 +1,4 @@
-package br.com.alura.microservice.loja.controller.dto;
+package br.com.alura.microservice.loja.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 public class CompraDTO {
 
-    private List<ItemDaCompra> itens;
+    private List<ItemDaCompraDTO> itens;
     private EnderecoDTO endereco;
 
 }
