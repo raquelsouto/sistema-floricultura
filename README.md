@@ -1,6 +1,6 @@
 # Sistema-floricultura
 
-O projeto a ser desenvolvido é um sistema para uma floricultura e seus diversos microsserviços. O projeto será realizado com Spring Cloud.
+O projeto a ser desenvolvido é um sistema para uma floricultura, com integração de diversos microsserviços. O projeto será realizado com Spring Cloud (Eureka, Config Server, Ribbon, Open Feign).
 
 
 ## Loja 
