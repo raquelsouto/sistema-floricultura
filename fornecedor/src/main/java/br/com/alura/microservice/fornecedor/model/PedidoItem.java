@@ -9,20 +9,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class InfoFornecedor {
+public class PedidoItem {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String estado;
-	private String endereco;
+	private Integer quantidade;
 
+	@ManyToOne @JoinColumn(name = "produtoId")
+	private Produto produto;
 
 }
