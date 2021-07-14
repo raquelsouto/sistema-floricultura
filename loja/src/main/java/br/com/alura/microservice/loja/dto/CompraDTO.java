@@ -1,5 +1,6 @@
 package br.com.alura.microservice.loja.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,8 @@ import java.util.List;
 @Setter
 public class CompraDTO {
 
+    @JsonIgnore
+    private Long compraId;
     private List<ItemDaCompraDTO> itens;
     private EnderecoDTO endereco;
 

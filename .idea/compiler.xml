@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="loja" />
         <module name="config-server" />
+        <module name="transportador" />
         <module name="fornecedor" />
         <module name="eureka-server" />
       </profile>
@@ -18,6 +19,7 @@
       <module name="eureka-server" target="11" />
       <module name="fornecedor" target="1.8" />
       <module name="loja" target="11" />
+      <module name="transportador" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +28,7 @@
       <module name="eureka-server" options="-parameters" />
       <module name="fornecedor" options="-parameters" />
       <module name="loja" options="-parameters" />
+      <module name="transportador" options="-parameters" />
     </option>
   </component>
 </project>

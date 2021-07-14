@@ -1,4 +1,4 @@
-package br.com.alura.microservice.loja.client.repository;
+package br.com.alura.microservice.loja.repository;
 
 import br.com.alura.microservice.loja.model.Compra;
 import org.springframework.data.repository.CrudRepository;

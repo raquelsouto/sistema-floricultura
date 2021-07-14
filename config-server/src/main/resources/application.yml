@@ -10,4 +10,4 @@ spring:
         git:
           default-label: main
           uri: https://github.com/raquelsouto/microservice-repository
-          search-paths: fornecedor, loja
+          search-paths: fornecedor, loja, transportador
