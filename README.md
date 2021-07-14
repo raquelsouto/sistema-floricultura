@@ -2,11 +2,16 @@
 
 O projeto a ser desenvolvido é um sistema para uma floricultura, com integração de diversos microsserviços. O projeto será realizado com Spring Cloud.
 
-versão 0.1:
+versão 1.0:
 * Eureka - Service registry e Discovery    
 * Spring Feign e ClientSide Loadbalance  
 * Spring Config Server (Git: microservice-repository)  
 * Distrubuted Tracing, Papertrail e Spring Sleuth; 
+
+versão 2.0:
+* Tratamento de falhas com Hystrix (Circuit breaker e Fallback)  
+* Bulkhead com Hystrix  
+
 
 ## Loja 
   Realiza a gestão do pedido:
