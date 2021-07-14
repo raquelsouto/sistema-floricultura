@@ -5,6 +5,8 @@ import br.com.alura.microservice.loja.dto.CompraDTO;
 import br.com.alura.microservice.loja.dto.InfoFornecedorDTO;
 import br.com.alura.microservice.loja.dto.InfoPedidoDTO;
 import br.com.alura.microservice.loja.model.Compra;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.HttpMethod;
@@ -21,23 +23,29 @@ public class CompraService {
 //    @Autowired
 //    DiscoveryClient eurekaClient;
 
+    private static Logger LOG = LoggerFactory.getLogger(CompraService.class);
+
     @Autowired
     FornecedorClient fornecedorClient;
 
 
     public Compra realizaCompra(CompraDTO compraDTO) {
-        InfoFornecedorDTO infoFornecedorDTO = fornecedorClient.getInfoPorEstado(compraDTO.getEndereco().getEstado());
+        final String estado = compraDTO.getEndereco().getEstado();
 
-        //Realiza pedido
+        LOG.info("buscando informações do fornecedor de {}", estado);
+        InfoFornecedorDTO  info = fornecedorClient.getInfoPorEstado(compraDTO.getEndereco().getEstado());
+
+        LOG.info("realizando um pedido");
         InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compraDTO.getItens());
-
-        System.out.println(infoFornecedorDTO.getEndereco());
 
         //Retorno do pedido
         Compra compraSalva = new Compra();
         compraSalva.setPedidoId(pedido.getId());
         compraSalva.setTempoDepreparo(pedido.getTempoDePreparo());
         compraSalva.setEnderecoDestino(compraDTO.getEndereco().toString());
+
+        System.out.println(info.getEndereco());
+
         return compraSalva;
     }
 }
