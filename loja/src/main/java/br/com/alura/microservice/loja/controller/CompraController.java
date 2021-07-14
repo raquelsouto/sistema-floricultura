@@ -13,6 +13,12 @@ public class CompraController {
     @Autowired
     CompraService compraService;
 
+    @GetMapping("/{id}")
+    public Compra getById(@PathVariable("id") Long id) {
+        return compraService.getById(id);
+
+    }
+
     @PostMapping
     public Compra realizaCompra(@RequestBody CompraDTO compraDTO) {
         return compraService.realizaCompra(compraDTO);
