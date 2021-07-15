@@ -11,6 +11,7 @@
         <module name="config-server" />
         <module name="transportador" />
         <module name="fornecedor" />
+        <module name="zuul" />
         <module name="eureka-server" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="fornecedor" target="1.8" />
       <module name="loja" target="11" />
       <module name="transportador" target="11" />
+      <module name="zuul" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,6 +31,7 @@
       <module name="fornecedor" options="-parameters" />
       <module name="loja" options="-parameters" />
       <module name="transportador" options="-parameters" />
+      <module name="zuul" options="-parameters" />
     </option>
   </component>
 </project>

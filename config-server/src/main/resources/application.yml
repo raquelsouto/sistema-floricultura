@@ -6,7 +6,7 @@ spring:
     config:
       server:
         encrypt:
-          enabled: false
+            enabled: false
         git:
           default-label: main
           uri: https://github.com/raquelsouto/microservice-repository

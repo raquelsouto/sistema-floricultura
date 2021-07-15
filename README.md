@@ -11,7 +11,10 @@ versão 1.0:
 versão 2.0:
 * Tratamento de falhas com Hystrix (Circuit breaker e Fallback)  
 * Bulkhead com Hystrix  
-
+* Integração entre serviços  
+* Lidando com transações e erros   
+* Api Gateway com Zuul   
+* Spring Oauth e Security
 
 ## Loja 
   Realiza a gestão do pedido:

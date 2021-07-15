@@ -10,5 +10,7 @@
     <file url="file://$PROJECT_DIR$/loja/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/transportador/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/transportador/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul/src/main/resources" charset="UTF-8" />
   </component>
 </project>

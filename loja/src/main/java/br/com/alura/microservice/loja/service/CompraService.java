@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @Service
 public class CompraService {
 
-    private static Logger LOG = LoggerFactory.getLogger(CompraService.class);
+    //private static Logger LOG = LoggerFactory.getLogger(CompraService.class);
 
     @Autowired
     CompraRepository compraRepository;
@@ -51,17 +51,15 @@ public class CompraService {
         compraRepository.save(compraSalva);
         compraDTO.setCompraId(compraSalva.getId());
 
-        LOG.info("buscando informações do fornecedor de {}", estado);
+        //LOG.info("buscando informações do fornecedor de {}", estado);
         InfoFornecedorDTO  info = fornecedorClient.getInfoPorEstado(compraDTO.getEndereco().getEstado());
 
-        LOG.info("realizando um pedido");
+       //LOG.info("realizando um pedido");
         InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compraDTO.getItens());
         compraSalva.setState(CompraState.PEDIDO_REALIZADO);
         compraSalva.setPedidoId(pedido.getId());
         compraSalva.setTempoDepreparo(pedido.getTempoDePreparo());
         compraRepository.save(compraSalva);
-
-        if(1==1) throw new RuntimeException();
 
         //Informações para reservar uma entrega
         InfoEntregaDTO entregaDto = new InfoEntregaDTO();

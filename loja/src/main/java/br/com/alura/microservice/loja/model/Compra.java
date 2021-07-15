@@ -15,8 +15,8 @@ import java.time.LocalDate;
 @Entity
 public class Compra {
 
-    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
     private Long pedidoId;
     private Integer tempoDepreparo;

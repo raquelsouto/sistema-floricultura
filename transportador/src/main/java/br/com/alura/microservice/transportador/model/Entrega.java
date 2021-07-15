@@ -19,8 +19,9 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Entrega {
 
-	@Id
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	private Long id;
 	private Long pedidoId;
 	private LocalDate dataParaBusca;
