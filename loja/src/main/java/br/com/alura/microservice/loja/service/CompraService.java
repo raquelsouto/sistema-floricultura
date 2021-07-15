@@ -17,8 +17,6 @@ import java.time.LocalDate;
 @Service
 public class CompraService {
 
-    //private static Logger LOG = LoggerFactory.getLogger(CompraService.class);
-
     @Autowired
     CompraRepository compraRepository;
 
@@ -43,7 +41,6 @@ public class CompraService {
 
     @HystrixCommand(fallbackMethod = "realizaCompraFallback", threadPoolKey = "realizaCompraThreadPool")
     public Compra realizaCompra(CompraDTO compraDTO) {
-        final String estado = compraDTO.getEndereco().getEstado();
 
         Compra compraSalva = new Compra();
         compraSalva.setState(CompraState.RECEBIDO);
@@ -51,10 +48,8 @@ public class CompraService {
         compraRepository.save(compraSalva);
         compraDTO.setCompraId(compraSalva.getId());
 
-        //LOG.info("buscando informações do fornecedor de {}", estado);
-        InfoFornecedorDTO  info = fornecedorClient.getInfoPorEstado(compraDTO.getEndereco().getEstado());
 
-       //LOG.info("realizando um pedido");
+        InfoFornecedorDTO  info = fornecedorClient.getInfoPorEstado(compraDTO.getEndereco().getEstado());
         InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compraDTO.getItens());
         compraSalva.setState(CompraState.PEDIDO_REALIZADO);
         compraSalva.setPedidoId(pedido.getId());

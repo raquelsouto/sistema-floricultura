@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="loja" />
         <module name="config-server" />
         <module name="transportador" />
+        <module name="auth" />
+        <module name="loja" />
         <module name="fornecedor" />
         <module name="zuul" />
         <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="auth" target="11" />
       <module name="config-server" target="11" />
       <module name="eureka-server" target="11" />
-      <module name="fornecedor" target="1.8" />
+      <module name="fornecedor" target="11" />
       <module name="loja" target="11" />
       <module name="transportador" target="11" />
       <module name="zuul" target="11" />
@@ -26,6 +28,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="fornecedor" options="-parameters" />

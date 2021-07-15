@@ -20,14 +20,11 @@ import br.com.alura.microservice.fornecedor.service.PedidoService;
 @RequestMapping("pedido")
 public class PedidoController {
 
-	private static Logger LOG = LoggerFactory.getLogger(PedidoController.class);
-
 	@Autowired
 	private PedidoService pedidoService;
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public Pedido realizaPedido(@RequestBody List<ItemDoPedidoDTO> produtos) {
-		LOG.info("pedido recebido");
 		return pedidoService.realizaPedido(produtos);
 	}
 	
