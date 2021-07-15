@@ -6,7 +6,7 @@ versão 1.0:
 * Eureka - Service registry e Discovery    
 * Spring Feign e ClientSide Loadbalance  
 * Spring Config Server (Git: microservice-repository)  
-* Distrubuted Tracing, Papertrail e Spring Sleuth; 
+* Distributed Tracing, Papertrail e Spring Sleuth; 
 
 versão 2.0:
 * Tratamento de falhas com Hystrix (Circuit breaker e Fallback)  
