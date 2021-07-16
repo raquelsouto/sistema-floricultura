@@ -17,14 +17,16 @@ import java.time.LocalDate;
 @Service
 public class CompraService {
 
+    private static final Logger LOG =  LoggerFactory.getLogger(CompraService.class);
+
     @Autowired
-    CompraRepository compraRepository;
+    FornecedorClient fornecedorClient;
 
     @Autowired
     TransportadorClient transportadorClient;
 
     @Autowired
-    FornecedorClient fornecedorClient;
+    CompraRepository compraRepository;
 
     @HystrixCommand(threadPoolKey = "getByIdThreadPool")
     public Compra getById(Long id) {
@@ -47,7 +49,6 @@ public class CompraService {
         compraSalva.setEnderecoDestino(compraDTO.getEndereco().toString());
         compraRepository.save(compraSalva);
         compraDTO.setCompraId(compraSalva.getId());
-
 
         InfoFornecedorDTO  info = fornecedorClient.getInfoPorEstado(compraDTO.getEndereco().getEstado());
         InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compraDTO.getItens());

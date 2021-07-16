@@ -11,7 +11,7 @@ eureka:
 
 security:
   oath2:
-    resorce:
+    resource:
       user-info-uri: http://localhost:8088/user
 
 hystrix:

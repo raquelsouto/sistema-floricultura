@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class CompraController {
 
     @Autowired
-    CompraService compraService;
+    private CompraService compraService;
 
     @RequestMapping("/{id}")
     public Compra getById(@PathVariable("id") Long id) {

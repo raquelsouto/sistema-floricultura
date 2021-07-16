@@ -31,7 +31,7 @@ public class LojaApplication {
 					return;
 				}
 				OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) authentication.getDetails();
-				requestTemplate.header("Authorization", "Bearer", details.getTokenValue());
+				requestTemplate.header("Authorization", "Bearer" + details.getTokenValue());
 			}
 		};
 	}
