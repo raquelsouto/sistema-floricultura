@@ -9,8 +9,5 @@ public class ItemDoPedidoDTO {
 
 	private long id;
 	private int quantidade;
-	public long getId() {
-		return id;
-	}
 
 }

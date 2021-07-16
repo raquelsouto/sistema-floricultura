@@ -27,7 +27,6 @@ public class PedidoService {
 		if(itens == null) {
 			return null;
 		}
-
 		List<PedidoItem> pedidoItens = toPedidoItem(itens);
 		Pedido pedido = new Pedido(pedidoItens);
 		pedido.setTempoDePreparo(itens.size());

@@ -11,7 +11,6 @@ public class InfoService {
 
 	@Autowired
 	private InfoRepository infoRepository;
-	
 	public InfoFornecedor getInfoPorEstado(String estado) {
 		return infoRepository.findByEstado(estado);
 	}

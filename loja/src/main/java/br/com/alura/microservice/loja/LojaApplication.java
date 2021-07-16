@@ -22,7 +22,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableResourceServer
 public class LojaApplication {
 	@Bean
-	public RequestInterceptor getInterceptorDeAutenticação() {
+	public RequestInterceptor getInterceptorDeAutenticacao() {
 		return new RequestInterceptor() {
 			@Override
 			public void apply(RequestTemplate requestTemplate) {
